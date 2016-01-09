@@ -1,7 +1,7 @@
 angular.module('sappyAppy')
-  .controller('mainCtrl', function($scope, $firebaseObject, mainSvc) {
+  .controller('mainCtrl', function($scope, $firebaseObject) {  //pass in mainSvc
     $scope.testMainCtrl = 'mainCtrl is working';
-    $scope.mainSvc = mainSvc.getMainSvc();
+    // $scope.mainSvc = mainSvc.getMainSvc();
     console.log('MainCtrl is logging');
 
 
@@ -9,14 +9,14 @@ angular.module('sappyAppy')
     $scope.context = $scope.canvas.getContext('2d');
     // I can do stuff!
     var baseUrl = 'https://carfiredevmountaintt.firebaseio.com/';
-    // console.log('1. ' + baseUrl);
+    console.log('1. MainCtrl. ' + baseUrl);
     var ref = new Firebase(baseUrl + '/pic');
     var fbo = $firebaseObject(ref);
-    // console.log('2. ',  $scope.context);
+    console.log('2. MainCtrl. ',  $scope.context);
     fbo.thingy = $scope.context.getImageData(0, 0, 50, 50);
     fbo.value = "This is a test";
     fbo.$save();
-    // console.log('3. ', fbo);
+    console.log('3. MainCtrl. ', fbo);
 
     function randomColor() {
       var rInt = Math.floor((Math.random() * 250)); // floor, ceil, and round

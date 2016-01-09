@@ -1,8 +1,9 @@
 angular.module('sappyAppy')
-  .controller('copyrightCtrl', function($scope) {
-    $scope.test = function() {
+  .controller('copyrightCtrl', function($scope, copyrightSvc) {
+    $scope.newFunc = function() {
       console.log("copyrightCtrl is logging");
-      var currentDate = new Date().getFullYear();
+      $scope.copyrightSvc = copyrightSvc.getCopyrightSvc();
+      var currentDate = new date().getFullYear();
       $scope.getDate = currentDate.toString();
       console.log($scope.date);
       $scope.testThis = 'passing to directive';
