@@ -1,6 +1,10 @@
 angular.module('sappyAppy')
-  .controller('mainCtrl', function($scope, $firebaseObject) {
-    $scope.test = 'stringy';
+  .controller('mainCtrl', function($scope, $firebaseObject, mainSvc) {
+    $scope.testMainCtrl = 'mainCtrl is working';
+    $scope.mainSvc = mainSvc.getMainSvc();
+    console.log('MainCtrl is logging');
+
+
     $scope.canvas = document.getElementById('canvas');
     $scope.context = $scope.canvas.getContext('2d');
     // I can do stuff!
