@@ -14,7 +14,7 @@ angular.module('sappyAppy')
     // includes logging for testing purposes.
     var baseUrl = 'https://carfiredevmountaintt.firebaseio.com/';
     console.log('1. MainCtrl. ' + baseUrl);
-    //
+
     var ref = new Firebase(baseUrl + '/pic');
     var fbo = $firebaseObject(ref);
     console.log('2. MainCtrl. ',  $scope.context);
@@ -24,9 +24,8 @@ angular.module('sappyAppy')
     console.log('3. MainCtrl. ', fbo);
 
 
-        // calling drawing functions
-        $scope.drawSquares = drawSquares();
 
+    // randomColor generator
     function randomColor() {
       var rInt = Math.floor((Math.random() * 250)); // floor, ceil, and round
       var gInt = Math.floor((Math.random() * 250));
@@ -40,12 +39,13 @@ angular.module('sappyAppy')
       $scope.context.fillRect(Math.random() * 500, Math.random() * 500, Math.random() * 50, Math.random() * 50);
     }
 
+    //draws by dragging cursor
     function drawWithCursor() {
       function strokeThat() {
         $scope.context.strokeStyle = "white";
         $scope.context.lineWidth = 10;
       }
-
+      //draws lines
       function drawLine() {
         $scope.context.beginPath = "white";
         $scope.context.moveTo = (100, 100);
@@ -58,6 +58,9 @@ angular.module('sappyAppy')
     // console.log('5. ' + 'where is number 4?');
     // pass just the definition, not the result of the funciton
 
+    // gives drawing functions access to the $scope
+    //intereting note:it's not initialized as a function, this happens later on a button click event
+    $scope.drawSquares = drawSquares;
 
   });
 
@@ -65,7 +68,7 @@ angular.module('sappyAppy')
       to be accessed on the DOM.
       #scope. is the required prefix for DOM passing
       */
-  /* the controller also is responsible for running the 
+  /* the controller also is responsible for running the
       funtions stored elswhere in the object/filestructure
       by assigning it to the $scope. It is a lazy manager,
       who keeps track of work being performed, issues
