@@ -1,5 +1,5 @@
 angular.module('sappyAppy')
-  .controller('mainCtrl', function($scope, $firebaseObject, mainSvc) {  // inject dependancies, $scope, and service objects
+  .controller('mainCtrl', function($scope, $firebaseObject, mainSvc) { // inject dependancies, $scope, and service objects
     // adding/logging tests for mainCtrl to the DOM
     $scope.testMainCtrl = 'mainCtrl is working';
     console.log('MainCtrl is logging');
@@ -17,7 +17,7 @@ angular.module('sappyAppy')
 
     var ref = new Firebase(baseUrl + '/pic');
     var fbo = $firebaseObject(ref);
-    console.log('2. MainCtrl. ',  $scope.context);
+    console.log('2. MainCtrl. ', $scope.context);
     fbo.thingy = $scope.context.getImageData(0, 0, 50, 50);
     fbo.value = "This is a test";
     fbo.$save();
@@ -59,18 +59,20 @@ angular.module('sappyAppy')
     // pass just the definition, not the result of the funciton
 
     // gives drawing functions access to the $scope
-    //intereting note:it's not initialized as a function, this happens later on a button click event
+    // intereting note:it's not initialized as a function, this happens later on a button click event
+
+
     $scope.drawSquares = drawSquares;
 
   });
 
-  /* the controller is where data is stored to variables
-      to be accessed on the DOM.
-      #scope. is the required prefix for DOM passing
-      */
-  /* the controller also is responsible for running the
-      funtions stored elswhere in the object/filestructure
-      by assigning it to the $scope. It is a lazy manager,
-      who keeps track of work being performed, issues
-      commands and readies responses to be delivered to
-      the DOM*/
+/* the controller is where data is stored to variables
+    to be accessed on the DOM.
+    #scope. is the required prefix for DOM passing
+    */
+/* the controller also is responsible for running the
+    funtions stored elswhere in the object/filestructure
+    by assigning it to the $scope. It is a lazy manager,
+    who keeps track of work being performed, issues
+    commands and readies responses to be delivered to
+    the DOM*/
