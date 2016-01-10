@@ -4,7 +4,7 @@ angular.module('sappyAppy')
     return{
       restrict: 'E', //figure out what this does later
       templateUrl: 'js/views/copyrightTmpl.html',
-      controller: 'copyrightCtrl'
+      controller: 'copyrightCtrl',
     };
   });
   console.log('copyrightDir logging outside of Dir function');

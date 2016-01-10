@@ -1,13 +1,9 @@
 angular.module('sappyAppy')
   .controller('copyrightCtrl', function($scope, copyrightSvc) {
-    $scope.newFunc = function() {
-      console.log("copyrightCtrl is logging");
-      $scope.copyrightSvc = copyrightSvc.getCopyrightSvc();
-      var currentDate = new date().getFullYear();
-      $scope.getDate = currentDate.toString();
-      console.log($scope.date);
-      $scope.testThis = 'passing to directive';
 
-    };
+      $scope.getDate = copyrightSvc.newFunc(); //calls the service object.then the funciton method on that object.
+    // setTimout(function(){
+      // $scope.newFunc();
+    // },1000);
   });
 console.log('controller is being loaded');

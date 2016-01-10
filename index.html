@@ -13,15 +13,25 @@
 
   <button ng-click="drawStuff()" type="button" name="button">Draw Stuff</button>
   <hr>
-  {{testMainCtrl}}
+  {{testCanvasCtrl}} //from canvasCtrl
   <hr>
-  <!-- {{mainSvc}} -->
+  {{testMainCtrl}} // from maincontrol
   <hr>
+  {{mainSvc}}
+  <hr>
+  <hr>
+  <!-- {{.directive.templateUrl}} <!--//from canvasDir --> -->
+  <hr>
+
+  <hr>
+
+  <hr>
+
   <canvas-directive></canvas-directive> <!-- name of Directive-->
   <hr>
   {{testCanvasCtrl}}
   <hr>
-  
+
   <copyright-dir></copyright-dir> <!-- it's a pane! -->
   <ui-view></ui-view>  <!-- routes,sets a format for windows/views-->
   <!-- AngularJS -->
@@ -34,7 +44,7 @@
   <!-- My Scripts -->
   <script src="./js/app.js"></script>
   <script src="./js/mainCtrl.js"></script>
-  <!-- <script src="./mainsvc.js"></script> Empty for now-->
+  <script src="./js/mainSvc.js"></script>
   <script src="./js/views/copyrightDir.js"></script>
   <script src="./js/views/copyrightCtrl.js"></script>
   <script src="./js/views/copyrightsvc.js"></script>

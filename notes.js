@@ -39,5 +39,10 @@ setInterval(function(){
 
 function renderTime(){
   var now = new Date();
-  
+
 }
+
+
+// setTimout(function(){
+  // $scope.newFunc();
+// },1000);
