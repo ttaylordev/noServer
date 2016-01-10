@@ -1,25 +1,16 @@
 angular.module('sappyAppy')
   .directive('copyrightDir', function() {
+    //  logging and testing this directive
     console.log('copyrightDir logging inside of Dir function');
     return{
-      restrict: 'E', //figure out what this does later
+      restrict: 'E',
       templateUrl: 'js/views/copyrightTmpl.html',
       controller: 'copyrightCtrl',
     };
   });
-  console.log('copyrightDir logging outside of Dir function');
 
-
-// angular.module('sappyAppy')
-//     .directive('copyrightDir', function () {
-//         return {
-//             restrict: 'E',
-//             templateUrl: 'js/views/copyrightTmpl.html',
-//             controller: function ($scope) {
-//                 console.log("CopyrightDirCtrl Running");
-//                 var currentDate = new Date().getFullYear();
-//                 $scope.date = currentDate.toString();
-//                 console.log($scope.date);
-//             }
-//         };
-//     });
+  // the directive injects HTML as a pane from a template file into the DOM of my main window
+  // restrict:
+    // 'E'(elements) allows you to use empty<name-of-your-directive-in-snake-case></name-of-your-directive-in-snake-case>
+    // 'A'(attributes)
+    // 'C'(class)

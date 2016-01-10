@@ -10,30 +10,31 @@
 <body ng-controller="mainCtrl">
   <canvas id="canvas" width="500" height="500"></canvas>
   <button ng-click="drawSquares()" type="button" name="button">Squares!</button>
-
   <button ng-click="drawStuff()" type="button" name="button">Draw Stuff</button>
   <hr>
-  {{testCanvasCtrl}} //from canvasCtrl
+  {{testMainCtrl}}
   <hr>
-  {{testMainCtrl}} // from maincontrol
+  {{testMainSvc}}
   <hr>
-  {{mainSvc}}
+  {{testCopyrightCtrl}}
   <hr>
+  {{copyrightSvcIsLoading}}
   <hr>
-  <!-- {{.directive.templateUrl}} <!--//from canvasDir --> -->
-  <hr>
-
-  <hr>
-
-  <hr>
-
-  <canvas-directive></canvas-directive> <!-- name of Directive-->
+  {{getYear}}
   <hr>
   {{testCanvasCtrl}}
   <hr>
-
-  <copyright-dir></copyright-dir> <!-- it's a pane! -->
-  <ui-view></ui-view>  <!-- routes,sets a format for windows/views-->
+  {{canvasSvcIsLoading}}
+  <hr>
+  <ui-view></ui-view>  <!-- routes,sets a format for windows/views using ui-router and URL hashes-->
+  **don't worry, it's normal to not have this part populated yet
+  <hr>
+  <!-- uses the name/value of directive node of the angular.module object-->
+  <canvas-directive></canvas-directive>
+  <hr>
+  <!-- uses the name/value of directive node of the angular.module object-->
+  <!-- it's a pane! -->
+  <copyright-dir></copyright-dir>
   <!-- AngularJS -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
@@ -41,20 +42,19 @@
   <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
   <!-- AngularFire -->
   <script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.js"></script>
-  <!-- My Scripts -->
+  <!-- My main window Scripts -->
   <script src="./js/app.js"></script>
   <script src="./js/mainCtrl.js"></script>
   <script src="./js/mainSvc.js"></script>
+  <!-- <script type="mainDir.js"></script> -->
+  <!-- copyright pane -->
   <script src="./js/views/copyrightDir.js"></script>
   <script src="./js/views/copyrightCtrl.js"></script>
   <script src="./js/views/copyrightsvc.js"></script>
+  <!-- canvas pane -->
   <script src="./js/directives/canvasDir.js"></script>
   <script src="./js/directives/canvasCtrl.js"></script>
   <script src="./js/directives/canvasSvc.js"></script>
-
-
-
-  <!-- <script type="mainDir.js"></script> -->
 
 </body>
 

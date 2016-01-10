@@ -1,9 +1,17 @@
-canvasTmpl.Html is working and ...{{testThis}}
+<!-- testing that this file is displaying text
+where it is plugged into the DOM by the directive -->
+From:canvasTmpl.Html: (canvasTmpl.html is displaying)
+
 <hr>
-  {{working}} <!--from nested controler -->
+
+<!-- testing that this file is able to retrieve data
+from the $scope within the controller -->
+From:canvasTmpl.html via canvasCtrl: ({{working}}) <!--from canvasCtrl -->
 
 
-<!-- the <login-directive> tag in
+<!-- the <canvas-directive> element tag in
 index.html is requesting an action
 from loginDirective, which is returning
-loginTempl.html-->
+the contents of canvasTempl.html
+it then loads that onto the DOM
+at the tags location-->

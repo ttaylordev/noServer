@@ -46,3 +46,26 @@ function renderTime(){
 // setTimout(function(){
   // $scope.newFunc();
 // },1000);
+
+/* The $http service is a core Angular service
+that facilitates communication with the remote HTTP
+servers via the browser's XMLHttpRequest object or
+via JSONP.*/
+
+
+
+
+
+// angular.module('sappyAppy')
+//     .directive('copyrightDir', function () {
+//         return {
+//             restrict: 'E',
+//             templateUrl: 'js/views/copyrightTmpl.html',
+//             controller: function ($scope) {
+//                 console.log("CopyrightDirCtrl Running");
+//                 var currentDate = new Date().getFullYear();
+//                 $scope.date = currentDate.toString();
+//                 console.log($scope.date);
+//             }
+//         };
+//     });
