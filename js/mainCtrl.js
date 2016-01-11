@@ -15,23 +15,61 @@ angular.module('sappyAppy')
     var baseUrl = 'https://blazing-inferno-1647.firebaseio.com//';
     var ref = new Firebase(baseUrl + '/game-board');
     var fbo = $firebaseObject(ref); // allows us to write to a firebase object
+    var activeColor = randomColor();
 
-    // gets the mouse position, and sends it to Firebase
-    $scope.canvas.addEventListener('mousemove', function(evt) { //snake case because it's an html thing.
+    // gets the mouse position, and sends it to Firebase while lineDraw 'ing under the mouse cursor
+    $scope.canvas.addEventListener('mousemove', function(evt) {
+      var mousePos = mouseLoc($scope.canvas, evt);
       if (mouseDown) {
-        var colorFlag = '#f34456';
-        var mousePos = mouseLoc($scope.canvas, evt);
-        console.log('!!!mouseX: ' + mousePos.x + ', mouseY: ' + mousePos.y);
-        // drawWithCursor(mousePos.x, mousePos.y);
-        freeDraw(mousePos.x, mousePos.y);
+        mousePos = mouseLoc($scope.canvas, evt);
+        lineDraw(mousePos.x, mousePos.y, activeColor);
         fbo.cursorStatus = {
           x: mousePos.x,
           y: mousePos.y,
-          color: colorFlag
+          color: activeColor
         };
         fbo.$save(); //method to send.
       }
     }, false);
+
+    //// TODO: experiment with paths, drawing lines from code
+
+
+    // First path
+    $scope.context.beginPath();
+    $scope.context.strokeStyle = 'blue';
+    $scope.context.moveTo(20, 20);
+    $scope.context.lineTo(200, 20);
+    $scope.context.stroke();
+
+    // Second path
+    $scope.context.beginPath();
+    $scope.context.strokeStyle = 'green';
+    $scope.context.moveTo(100, 50);
+    $scope.context.lineTo(100, 75);
+    $scope.context.stroke();
+
+
+
+
+
+    // // gets the mouse position, and sends it to Firebase while drawing under the mouse cursor
+    // $scope.canvas.addEventListener('mousemove', function(evt) { //snake case because it's an html thing.
+    //   if (mouseDown) {
+    //     var mousePos = mouseLoc($scope.canvas, evt);
+    //     console.log('!!!mouseX: ' + mousePos.x + ', mouseY: ' + mousePos.y);
+    //     // drawWithCursor(mousePos.x, mousePos.y);
+    //     freeDraw(mousePos.x, mousePos.y);
+    //     fbo.cursorStatus = {
+    //       x: mousePos.x,
+    //       y: mousePos.y,
+    //       color: activeColor
+    //     };
+    //     fbo.$save(); //method to send.
+    //   }
+    // }, false);
+
+
 
     //retrieves data from fire base, x, y values as well as color choice
     ref.on("value", function(data) { //event handler for firebase, everytime they get new info they send it out to listeners
@@ -40,24 +78,21 @@ angular.module('sappyAppy')
       var color = data.val().cursorStatus.color;
       console.log('retrieved from firebase: ' + ',x: ' + exx + ',y: ' + why + ',color: ' + color);
     });
+
+
     // TODO: add users, and a switch statement to change the functionality of drawing with mouse, vs drawing from fbo data retrieved.
+
+
     //tracks state of mouse button
     var mouseDown = false;
     $scope.canvas.addEventListener('mousedown', function(evt) { //snake case because it's an html thing.
       mouseDown = true;
     }, false);
     $scope.canvas.addEventListener('mouseup', function(evt) { //snake case because it's an html thing.
+      activeColor = 'randomColor()';
       mouseDown = false;
     }, false);
 
-
-    // console.log('2. MainCtrl. ', $scope.context);
-
-    // fbo.thingy = $scope.context.getImageData(0,0,50,50);
-    // fbo.value = "This is a test";
-    // fbo.$save(); //method to send.
-    //
-    // console.log('3. MainCtrl. ', fbo);
 
     //return mouse location
     function mouseLoc(canvas, evt) {
@@ -71,11 +106,8 @@ angular.module('sappyAppy')
     //freedrawing
     function freeDraw(x, y) {
       $scope.context.fillStyle = randomColor();
-      $scope.context.fillRect(x, y, 5, 5);
-      console.log(x);
-      console.log(y);
-      console.log('freeDraw is logging');
-    } //return typis is void, because there's no return statement
+      $scope.context.fillRect(x, y, 7, 7);
+    } //return type is void, because there's no return statement
 
     // randomColor generator
     function randomColor() {
@@ -101,13 +133,31 @@ angular.module('sappyAppy')
       }
       strokeThat();
     }
+
     //draws lines
-    function drawLine() {
-      $scope.context.beginPath = "white";
-      $scope.context.moveTo = (100, 100);
-      $scope.context.lineTo(200, 200);
+    function lineDraw(x, y, activeColor) {
+      $scope.context.beginPath = (x, y);
+      $scope.context.strokeStyle = activeColor;
+      $scope.context.lineCap = 'round';
+      $scope.context.lineWidth = 10;
+      $scope.context.moveTo = (x, y);
+      $scope.context.lineTo(x, y);
       $scope.context.stroke();
+
     }
+
+    /* Marker effect
+        if ((x1 + x2)/(y1 + y2) > 30){ // turning a sharp corner will sometimes make the brush fade a bit like a white board marker
+        or... //TODO randomly on it's own while moving horizontally or near horizontally.
+          if (randomNumber*10 > 7){ // 30% chance to have the following effect
+          //TODO brush size dimmineshes in a for loop until it reaches 0px, then increments until hitting original
+          //TODO give the brush a streaky ,inconsistant gradient
+          //TODO fade into that gradient over a timer
+      }
+
+        */
+
+
 
     // store a var with an onclick listener, an array, add this to the firebase array.
     // on the user side, listen for changes from firebase

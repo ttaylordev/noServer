@@ -4,6 +4,7 @@ lineTo(x,y); //creates a line from last position to new coordinates
 closePath(); //closes the path;
 stroke(); //prints the stroke to the canvas
 fill(); //fills in the area, paintbucket style
+arcTo(x,y); // arcs to the point specified
 
 fillStyle = "white"; //seems to precede most commands, allows you to specify styling
 font = "px Helvetica";
@@ -28,11 +29,18 @@ setInterval(function(){
   fillStyle = "black"; // you can use an alpha on an rgba color to cause a fading trail behind the moving animation.
   fillRect(0,0, canvas.width, canvas.height);
   /*using only the below code, sort of slowly paints the object acrossed the screen leaving a permenant trail behind it*/
-  fillStyle = 'white'; //sets the draw color to white
+  fillStyle = 'red'; //sets the draw color to red
   beginPath(); //begins the path
   arc(nameAvar, 340, 50, 0, math.PI*2, false); //describes the shape of the object, and sets the x coordinate equal to an incrementing variable, causing it to slide across the screen
   fill(); //paints the object the fillStyle color previously set
 }, 30); //performs the inner function every 30 milli-seconds.
+
+// First path
+$scope.context.beginPath();
+$scope.context.strokeStyle = 'blue';
+$scope.context.moveTo(20, 20);
+$scope.context.lineTo(200, 20);
+$scope.context.stroke();
 
 
 
