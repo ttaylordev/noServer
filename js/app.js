@@ -1,4 +1,4 @@
-angular.module('sappyAppy',['firebase']); // inject 'firebase' into the empty array
+angular.module('sappyAppy',['firebase', 'ui.router']); // inject 'firebase' into the empty array
 //home
 //ui-router, switches between views
 //blank page

@@ -97,3 +97,41 @@ via JSONP.*/
 
 
   };
+
+
+
+
+/*landing
+lobby
+game
+
+u.router is in the dependancies of the app
+
+routing in config brings in $statepProvider, $Urlrouter provider
+	object
+	with state
+	buttons for state switching with sref
+
+
+
+
+directive
+	link function --can often be fairly large
+		access the canvas elements from html
+		create elements in the dom
+		add specific event listeners
+		color picker buttons etc
+
+postgame
+
+services -- will likely be fairly small, since i'm using firebase
+	holds the configuratino for the firebase server
+		drawing oard service
+		chat service
+		user service
+	# of services should be somewhat independant of directives and controllers
+	should be more dependant on the ammount of collections or data sets
+
+	great for ecommercem users, products etc, the data is stored on firebase
+	the service is the shippping and recieving department
+	*/

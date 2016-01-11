@@ -34,21 +34,21 @@ angular.module('sappyAppy')
 
     //// TODO: experiment with paths, drawing lines from code
 
-
-    // First path
-    $scope.context.beginPath();
-    $scope.context.strokeStyle = 'blue';
-    $scope.context.moveTo(20, 20);
-    $scope.context.lineTo(200, 20);
-    $scope.context.stroke();
-
-    // Second path
-    $scope.context.beginPath();
-    $scope.context.strokeStyle = 'green';
-    $scope.context.moveTo(100, 50);
-    $scope.context.lineTo(100, 75);
-    $scope.context.stroke();
-
+    //
+    // // First path
+    // $scope.context.beginPath();
+    // $scope.context.strokeStyle = 'blue';
+    // $scope.context.moveTo(20, 20);
+    // $scope.context.lineTo(200, 20);
+    // $scope.context.stroke();
+    //
+    // // Second path
+    // $scope.context.beginPath();
+    // $scope.context.strokeStyle = 'green';
+    // $scope.context.moveTo(100, 50);
+    // $scope.context.lineTo(100, 75);
+    // $scope.context.stroke();
+    //
 
 
 
@@ -86,6 +86,9 @@ angular.module('sappyAppy')
     //tracks state of mouse button
     var mouseDown = false;
     $scope.canvas.addEventListener('mousedown', function(evt) { //snake case because it's an html thing.
+      $scope.context.beginPath();
+      var pos = mouseLoc(canvas,evt);
+      $scope.context.moveTo(pos.x-1, pos.y-1);
       mouseDown = true;
     }, false);
     $scope.canvas.addEventListener('mouseup', function(evt) { //snake case because it's an html thing.
@@ -136,11 +139,10 @@ angular.module('sappyAppy')
 
     //draws lines
     function lineDraw(x, y, activeColor) {
-      $scope.context.beginPath = (x, y);
+
       $scope.context.strokeStyle = activeColor;
       $scope.context.lineCap = 'round';
       $scope.context.lineWidth = 10;
-      $scope.context.moveTo = (x, y);
       $scope.context.lineTo(x, y);
       $scope.context.stroke();
 
