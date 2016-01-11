@@ -69,3 +69,23 @@ via JSONP.*/
 //             }
 //         };
 //     });
+
+
+
+
+  this.canvasDeclare = function(){
+  return canvas;
+};
+
+  this.contextDeclare = function(canvasDeclare){
+  return context;
+  };
+
+
+  this.getCursorLoc = function(){
+    var storeLoc;
+
+
+
+
+  };

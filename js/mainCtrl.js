@@ -12,17 +12,30 @@ angular.module('sappyAppy')
 
     // declare firebase url and dom context.
     // includes logging for testing purposes.
-    var baseUrl = 'https://carfiredevmountaintt.firebaseio.com/';
+    var baseUrl = 'https://blazing-inferno-1647.firebaseio.com//';
     console.log('1. MainCtrl. ' + baseUrl);
 
-    var ref = new Firebase(baseUrl + '/pic');
-    var fbo = $firebaseObject(ref);
+    var ref = new Firebase(baseUrl + '/game-board');
+    var fbo = $firebaseObject(ref); // allows us to write to a firebase object
+
     console.log('2. MainCtrl. ',  $scope.context);
-    fbo.thingy = $scope.context.getImageData(0, 0, 50, 50);
+
+    fbo.cursorLoc = $scope.context.getImageData(0, 0, 50, 50);
     fbo.value = "This is a test";
-    fbo.$save();
+    fbo.$save(); //method to send.
+
     console.log('3. MainCtrl. ', fbo);
 
+//return mouse location
+  function mouseLoc(canvas, evt){
+    var rect = canvas.getBoundingClientRect();
+
+    return {
+      x:Math.round((evt.clientX-rect.left)/(rect.right-rect.left)*canvas.width),
+      y:Math.round((evt.clientY-rect.top)/(rect.bottom-rect.top)*canvas.height)
+    };
+
+  }
 
 
     // randomColor generator
