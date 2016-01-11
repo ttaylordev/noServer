@@ -1,0 +1,21 @@
+<!-- landing -->
+<!-- uses the name/value of directive node of the angular.module object-->
+<div ng-controller = "lobbyCtrl">
+
+  <lobby-directive></lobby-directive>
+  <join-team-directive></join-team-directive>
+  <start-game-directive></start-game-directive>
+  <chat-dir></chat-dir>
+  <copyright-dir></copyright-dir>
+
+</div>
+
+
+
+
+<!-- the <copyright-directive> element tag in
+index.html is requesting an action
+from loginDirective, which is returning
+the contents of copyrightTempl.html
+it then loads that onto the DOM
+at the tags location-->

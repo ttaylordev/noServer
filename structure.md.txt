@@ -1,0 +1,51 @@
+router calls template from .config
+
+-----NESTED VIEWS / DIRECTIVE STRUCTURE-----
+
+wrapper
+	canvas wrapper
+		canvas
+		chat
+			scroll
+		copyright
+	left wrapper
+		timer
+		landscapes
+			scroll
+		scores
+	right wrapper
+		brushes
+		scrolL
+
+----------------DATASTRUCTURE----------------
+users
+	user1:bob  //function to add users, receives last userID from FBO and increments for new user
+		teamID
+	user1:steve
+		teamID
+
+team
+	room
+rooms
+instanceID
+	roomID
+		game-owner //game owner determines active users switching funcitons, has access to the begin game controls, etc.
+		active-user  //feeds everyone the active user, determines who can draw and who listens, who can chat, who's timer is feeding to others, etc.
+		landscape	//permissions or functions to grant one user to alter at a time.
+		cursor-status ////permissions or functions to grant one user to alter at a time.
+			x
+			y
+			color
+			brushes
+			user
+
+		team1ID: array of users
+			score
+		team2ID: array of users
+			score
+		chat
+			/user
+			/message
+			/timer-status
+		timer
+			time

@@ -1,0 +1,20 @@
+<!-- testing that this file is displaying text
+where it is plugged into the DOM by the directive -->
+From:canvasTmpl.Html: (canvasTmpl.html is displaying)
+<canvas id="canvas" width="500" height="500"></canvas>
+<button ng-click="drawSquares()" type="button" name="button">Squares!</button>
+<button ng-click="drawStuff()" type="button" name="button">Draw Stuff</button>
+
+<hr>
+
+<!-- testing that this file is able to retrieve data
+from the $scope within the controller -->
+From:canvasTmpl.html via canvasCtrl: ({{working}}) <!--from canvasCtrl -->
+
+
+<!-- the <canvas-directive> element tag in
+index.html is requesting an action
+from loginDirective, which is returning
+the contents of canvasTempl.html
+it then loads that onto the DOM
+at the tags location-->

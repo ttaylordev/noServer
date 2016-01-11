@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="sappyAppy">
+<html ng-app="shareDraw">
 
 <head>
   <meta charset="utf-8">
@@ -8,9 +8,10 @@
 </head>
 
 <body ng-controller="mainCtrl">
-  <canvas id="canvas" width="500" height="500"></canvas>
-  <button ng-click="drawSquares()" type="button" name="button">Squares!</button>
-  <button ng-click="drawStuff()" type="button" name="button">Draw Stuff</button>
+  <!-- this ui-view for canvasDirective -->
+  <ui-view></ui-view>  <!-- routes,sets a format for windows/views using ui-router and URL hashes-->
+
+
   <hr>
   {{testMainCtrl}}
   <hr>
@@ -26,11 +27,8 @@
   <hr>
   {{canvasSvcIsLoading}}
   <hr>
-  <ui-view></ui-view>  <!-- routes,sets a format for windows/views using ui-router and URL hashes-->
   **don't worry, it's normal to not have this part populated yet
   <hr>
-  <!-- uses the name/value of directive node of the angular.module object-->
-  <canvas-directive></canvas-directive>
   <hr>
   <!-- uses the name/value of directive node of the angular.module object-->
   <!-- it's a pane! -->
@@ -46,16 +44,31 @@
   <script src="./js/app.js"></script>
   <script src="./js/mainCtrl.js"></script>
   <script src="./js/mainSvc.js"></script>
-  <!-- <script type="mainDir.js"></script> -->
-  <!-- copyright pane -->
-  <script src="./js/views/copyrightDir.js"></script>
-  <script src="./js/views/copyrightCtrl.js"></script>
-  <script src="./js/views/copyrightsvc.js"></script>
-  <!-- canvas pane -->
-  <script src="./js/directives/canvasDir.js"></script>
-  <script src="./js/directives/canvasCtrl.js"></script>
-  <script src="./js/directives/canvasSvc.js"></script>
+  <script src="./js/mainDir.js"></script>
 
+  <!-- brushes pane -->
+
+  <!-- canvas pane -->
+  <script src="./js/directives/canvas/canvasCtrl.js"></script>
+  <script src="./js/directives/canvas/canvasDir.js"></script>
+  <script src="./js/directives/canvas/canvasSvc.js"></script>
+
+  <!-- copyright pane -->
+  <script src="./js/directives/copyright/copyrightCtrl.js"></script>
+  <script src="./js/directives/copyright/copyrightDir.js"></script>
+  <script src="./js/directives/copyright/copyrightSvc.js"></script>
+
+  <!-- chat pane -->
+  <script src="./js/directives/chat/chatCtrl.js"></script>
+  <script src="./js/directives/chat/chatDir.js"></script>
+  <script src="./js/directives/chat/chatSvc.js"></script>
+
+  <!-- landscape -->
+  <!-- score -->
+  <!-- scroll -->
+  <!-- timer -->
+
+</script>
 </body>
 
 </html>
