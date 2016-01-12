@@ -4,8 +4,8 @@ angular.module('shareDraw')
       restrict: 'E',
       templateUrl: './js/directives/canvas/canvasTmpl.html',
       controller: 'canvasCtrl',
-      link: function(scope, element, attributes){
-
-      }
+      // link: function(scope, element, attributes){
+      //
+      // }
     };
 });

@@ -1,10 +1,10 @@
 angular.module('shareDraw')
-  .controller('canvasCtrl', function($scope, $firebaseObject, mainSvc) { // inject dependancies, $scope, and service objects
-    // adding/logging tests for mainCtrl to the DOM
-    $scope.testMainCtrl = 'mainCtrl is working';
-    console.log('MainCtrl is logging');
-    // adding tests for mainSvc to the DOM
-    $scope.testMainSvc = mainSvc.getMainSvc();
+  .controller('canvasCtrl', function($scope, $firebaseObject, canvasSvc) { // inject dependancies, $scope, and service objects
+    // adding/logging tests for canvasCtrl to the DOM
+    $scope.testCanvasCtrl = 'canvasCtrl is working';
+    console.log('canvasCtrl is logging');
+    // adding tests for canvasSvc to the DOM
+    $scope.testCanvasSvc = canvasSvc.getCanvasSvc();
 
     //assign/declare canvas element and context
     $scope.canvas = document.getElementById('canvas');

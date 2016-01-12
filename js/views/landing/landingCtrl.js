@@ -1,5 +1,5 @@
 angular.module('shareDraw')
-  .controller('landingCtrl', function($scope, DDDDDDD) { // inject dependancies, $scope and Svc's
+  .controller('landingCtrl', function($scope) { // inject dependancies, $scope and Svc's
     //logging and testing
     console.log('landingCtrl is logging inside');
     $scope.testLandingCtrl = 'landingCtrl is working';

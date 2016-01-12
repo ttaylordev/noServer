@@ -1,4 +1,17 @@
-angular.module('shareDraw',['firebase', 'ui.router']); // inject 'firebase' into the empty array
+// angular.module('shareDraw',['firebase', 'ui.router']) // inject 'firebase' into the empty array
+// .directive('mainDir', function(mainSvc) { // inject dependancies, $scope, and service objects
+//   return {
+//     restrict: 'E',
+//     templateUrl: './js/directives/canvas/canvasTmpl.html',
+//     controller: 'canvasCtrl',
+//     link: function(scope, element, attributes){
+//
+//     }
+//   };
+// });
+
+
+
 //[] calls angular dependencies like bower, or cdn's,
 //
 //ui-router, switches between views

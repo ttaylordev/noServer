@@ -4,7 +4,7 @@ angular.module('shareDraw')
     console.log('copyrightDir logging inside of Dir function');
     return{
       restrict: 'E',
-      templateUrl: 'js/views/copyrightTmpl.html',
+      templateUrl: './js/directives/copyright/copyrightTmpl.html',
       controller: 'copyrightCtrl',
     };
   });

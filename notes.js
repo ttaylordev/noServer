@@ -195,3 +195,25 @@ build greedy directivesm they shoudl take up as much space as they possibly can
 	put it inside of a parent div temporarily while youstyle it
 	but odds are
 */
+
+
+/*
+  <hr>
+  {{testMainCtrl}}
+  <hr>
+  {{testMainSvc}}
+  <hr>
+  {{testCopyrightCtrl}}
+  <hr>
+  {{copyrightSvcIsLoading}}
+  <hr>
+  {{getYear}}
+  <hr>
+  {{testCanvasCtrl}}
+  <hr>
+  {{canvasSvcIsLoading}}
+  <hr>
+  **don't worry, it's normal to not have this part populated yet
+  <hr>
+  <hr>
+*/

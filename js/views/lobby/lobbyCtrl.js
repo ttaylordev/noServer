@@ -1,5 +1,5 @@
 angular.module('shareDraw')
-  .controller('lobbyCtrl', function($scope, DDDDDDD) { // inject dependancies, $scope and Svc's
+  .controller('lobbyCtrl', function($scope) { // inject dependancies, $scope and Svc's
     //logging and testing
     console.log('lobbyCtrl is logging inside');
     $scope.testLobbyCtrl = 'lobbyCtrl is working';
