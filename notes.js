@@ -1,4 +1,32 @@
 // $compile
+//---------RUBBERDUCK METHOD---------
+// SAY IT OU LOUD, IF YOU CAN'T FIGURE SOMETHING out
+// PPL WILL ACTUALLY keep a rubberduck ontheir desk
+
+if (mouseDown){
+  beginPath();
+}
+// var mouseDown = false;
+  //listener for mouse down as a functions {
+  // beginPath(); begins a brand new fresh path
+  // stores mouseLoc to a variables
+  // moveTo specified pos
+  // sets mouseDown to true
+// }
+// on mousedown, begin fresh path, and move to x-1,y-1
+// set mousDown to true;
+
+//cole's hp bars
+// divs
+// css transitions
+// red background
+// purple = green w/ faster transitions
+// yellow = green full, with delay
+// green  = green full hp
+
+// detect a new path and send it to fb
+// listen for a new path from fb
+// begin a new path when listener fires
 
 beginPath(); //begins the a path for a line not knowing where to start from
 moveTo(x, y); //spevifies a location to perform an action

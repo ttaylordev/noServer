@@ -1,15 +1,21 @@
 <!-- testing that this file is displaying text
 where it is plugged into the DOM by the directive -->
-From:canvasTmpl.Html: (canvasTmpl.html is displaying)
-<canvas id="canvas" width="500" height="500"></canvas>
-<button ng-click="drawSquares()" type="button" name="button">Squares!</button>
-<button ng-click="drawStuff()" type="button" name="button">Draw Stuff</button>
 
-<hr>
+<div ng-controller="canvasCtrl">
+  <hr> {{testCanvasSvc}}
+  <hr> {{testCanvasCtrl}}
+  <hr>
+  <canvas id="canvas" width="500" height="500"></canvas>
+  <button ng-click="drawSquares()" type="button" name="button">Squares!</button>
+  <button ng-click="drawStuff()" type="button" name="button">Draw Stuff</button>
 
-<!-- testing that this file is able to retrieve data
+  <hr>
+
+  <!-- testing that this file is able to retrieve data
 from the $scope within the controller -->
-From:canvasTmpl.html via canvasCtrl: ({{working}}) <!--from canvasCtrl -->
+  sitting at the bottom, From:canvasTmpl.html via canvasCtrl: ({{working}})
+  <!--from canvasCtrl -->
+</div>
 
 
 <!-- the <canvas-directive> element tag in
