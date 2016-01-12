@@ -4,7 +4,7 @@ angular.module('shareDraw')
 
     this.testchatSvc = function() {
       var chatSvcIsLoading = 'chatSvc is loading';
-      console.log('From: chatSvc via chatCtrl: chatSvc is logging');
+      // console.log('From: chatSvc via chatCtrl: chatSvc is logging');
       return chatSvcIsLoading;
     };
 

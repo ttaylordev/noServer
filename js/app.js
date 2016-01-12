@@ -3,7 +3,7 @@ angular.module('shareDraw', ['firebase', 'ui.router'])
   // .constant('fburl', 'https://blazing-inferno-1647.firebaseio.com/')
   .config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
-    console.log('from app.config: app.js is logging');
+    // console.log('from app.config: app.js is logging');
     //might have a constant to inject into services
     $stateProvider
     // lobby state and nested views

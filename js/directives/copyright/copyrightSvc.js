@@ -3,13 +3,13 @@ angular.module('shareDraw')
 
     this.testCopyrightSvc = function() {
       var copyrightSvcIsLoading = 'copyrightsvc is loading';
-      console.log('testCopyrightSvc is logging');
+      // console.log('testCopyrightSvc is logging');
       return copyrightSvcIsLoading;
     };
 
     this.yearFunc = function() {
       var getYear = new Date().getFullYear().toString();
-      console.log('getDate' + getYear);
+      // console.log('getDate' + getYear);
       return getYear;
     };
   });

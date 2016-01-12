@@ -1,7 +1,7 @@
 angular.module('shareDraw')
   .directive('copyrightDir', function() {
     //  logging and testing this directive
-    console.log('copyrightDir logging inside of Dir function');
+    // console.log('copyrightDir logging inside of Dir function');
     return{
       restrict: 'E',
       templateUrl: './js/directives/copyright/copyrightTmpl.html',

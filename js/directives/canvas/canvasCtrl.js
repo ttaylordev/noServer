@@ -49,20 +49,20 @@ angular.module('shareDraw')
       $scope.context.lineCap = 'round';
       $scope.context.lineWidth = 10;
       if (cursorStatus.userMouseDown === true && runOnceVar === true && activeArtist === false) {
-        console.log('1st if is true');
+        // console.log('1st if is true');
         $scope.context.beginPath();
         $scope.context.moveTo(data.val().x - 1, data.val().y - 1);
         $scope.context.lineTo(data.val().x, data.val().y);
         $scope.context.stroke();
         runOnceVar = false;
       } else if (cursorStatus.userMouseDown === true && activeArtist === false && runOnceVar === false) {
-        console.log('2nd if is true');
+        // console.log('2nd if is true');
         $scope.context.lineTo(data.val().x, data.val().y);
         $scope.context.stroke();
       } else if (cursorStatus.userMouseDown === false) {
         $scope.context.beginPath();
         runOnceVar = true;
-        console.log('3rd is true');
+        // console.log('3rd is true');
       }
     });
 

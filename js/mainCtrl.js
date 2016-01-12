@@ -26,14 +26,14 @@ angular.module('shareDraw')
     });
     $scope.login = function(user) {
       authObj.$authWithPassword(user).then(function(authData) {
-        console.log('login authData', authData);
+        // console.log('login authData', authData);
       }, function(error) {
         alert(error);
       });
     };
     $scope.register = function(user) {
       authObj.$createUser(user).then(function(userData) {
-        console.log('register userData', userData);
+        // console.log('register userData', userData);
         $scope.login(user);
       }, function(error) {
         alert(error);

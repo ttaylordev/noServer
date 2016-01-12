@@ -1,7 +1,7 @@
 angular.module('shareDraw')
   .controller('copyrightCtrl', function($scope, copyrightSvc) { // inject dependancies, $scope and Svc's
     //logging and testing
-    console.log('copyrightCtrl is logging inside');
+    // console.log('copyrightCtrl is logging inside');
     $scope.testCopyrightCtrl = 'copyrightCtrl is working';
     $scope.copyrightSvcIsLoading = copyrightSvc.testCopyrightSvc();
     //calls the service object.then the funciton method on that object.
@@ -9,7 +9,7 @@ angular.module('shareDraw')
   });
 
   //logging and testing
-console.log('copyrightCtrl is logging outside');
+// console.log('copyrightCtrl is logging outside');
 
 
 /* the controller is where data is stored to variables

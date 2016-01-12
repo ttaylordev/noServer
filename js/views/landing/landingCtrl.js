@@ -1,12 +1,12 @@
 angular.module('shareDraw')
   .controller('landingCtrl', function($scope) { // inject dependancies, $scope and Svc's
     //logging and testing
-    console.log('landingCtrl is logging inside');
+    // console.log('landingCtrl is logging inside');
     $scope.testLandingCtrl = 'landingCtrl is working';
   });
 
   //logging and testing
-console.log('landingCtrl is logging outside');
+// console.log('landingCtrl is logging outside');
 
 /* the controller is where data is stored to variables
     to be accessed on the DOM.

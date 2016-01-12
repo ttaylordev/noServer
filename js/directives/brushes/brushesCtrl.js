@@ -1,11 +1,11 @@
 angular.module('shareDraw')
   .controller('canvasCtrl', function($scope, canvasSvc) {
     $scope.newFunc = function() {};
-    $scope.testCanvasCtrl = 'canvasCtrl is working';
+    // $scope.testCanvasCtrl = 'canvasCtrl is working';
     $scope.canvasSvcIsLoading = canvasSvc.testCanvasSvc();
-    $scope.working = 'objects on the canvasCtrl are displaying through the loginTmpl.html';
-    console.log('canvasCtrl is logging');
-    console.log('testCanvasCtrl');
+    // $scope.working = 'objects on the canvasCtrl are displaying through the loginTmpl.html';
+    // console.log('canvasCtrl is logging');
+    // console.log('testCanvasCtrl');
 
   });
 

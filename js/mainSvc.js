@@ -9,7 +9,7 @@ angular.module('shareDraw')
     //var references the constructor function itself, it is not output
     // by doing that, you can have functions call other functions within the service
 
-    console.log('mainSvc is logging from: mainSvc.');
+    // console.log('mainSvc is logging from: mainSvc.');
     this.getMainSvc = function() { // a method in a constructor function that will become an object
       var mainSvc = 'mainSvc is loading';
       return mainSvc;
