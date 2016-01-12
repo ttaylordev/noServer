@@ -1,10 +1,10 @@
 angular.module('shareDraw')
   .controller('canvasCtrl', function($scope, $firebaseObject, canvasSvc, mainSvc, $interval) { // inject dependancies, $scope, and service objects
     // adding/logging tests for canvasCtrl to the DOM
-    $scope.testCanvasCtrl = 'canvasCtrl is working';
-    console.log('canvasCtrl is logging');
+    // $scope.testCanvasCtrl = 'canvasCtrl is working';
+    // console.log('canvasCtrl is logging');
     // adding tests for canvasSvc to the DOM
-    this.testCanvasSvc = canvasSvc.testCanvasSvc();
+    // this.testCanvasSvc = canvasSvc.testCanvasSvc();
     // assign/declare canvas element and context
     $scope.canvas = document.getElementById('canvas');
     $scope.context = $scope.canvas.getContext('2d');
@@ -109,7 +109,7 @@ angular.module('shareDraw')
 
     // draws random squares
     function drawSquares() {
-      $scope.context.fillStyle = activeColor;
+      $scope.context.fillStyle = randomColor();
       $scope.context.fillRect(Math.random() * 500, Math.random() * 500, Math.random() * 50, Math.random() * 50);
     }
     $scope.drawSquares = drawSquares;

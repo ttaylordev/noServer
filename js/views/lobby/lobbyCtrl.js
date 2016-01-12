@@ -1,12 +1,12 @@
 angular.module('shareDraw')
-  .controller('lobbyCtrl', function($scope) { // inject dependancies, $scope and Svc's
+  .controller('lobbyCtrl', function($scope, chatSvc, mainSvc) { // inject dependancies, $scope and Svc's
     //logging and testing
-    console.log('lobbyCtrl is logging inside');
+    // console.log('lobbyCtrl is logging inside');
     $scope.testLobbyCtrl = 'lobbyCtrl is working';
   });
 
   //logging and testing
-console.log('lobbyCtrl is logging outside');
+// console.log('lobbyCtrl is logging outside');
 
 
 /* the controller is where data is stored to variables

@@ -1,0 +1,29 @@
+<!-- testing that this file is displaying text
+where it is plugged into the DOM by the directive -->
+
+{{testGameBoardCtrl}}
+<hr>
+{{testLobbyCtrl}}
+<hr>
+{{viewableMessage}}
+<hr>
+{{useless}}
+<hr>
+
+<div ng-controller="chatCtrl" class="chatPane">
+<div class="messagePane">
+
+</div>
+<input type="text" name="name" value="" prototype="Chat with your friends">
+<button ng-click="sendMessage()" type="button" name="button">Send</button>
+
+  <hr>
+</div>
+
+
+<!-- the <canvas-directive> element tag in
+index.html is requesting an action
+from loginDirective, which is returning
+the contents of canvasTempl.html
+it then loads that onto the DOM
+at the tags location-->

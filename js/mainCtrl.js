@@ -1,12 +1,11 @@
 angular.module('shareDraw')
   .controller('mainCtrl', function($scope, $firebaseObject, mainSvc) {
-    console.log(mainSvc);
+    // console.log(mainSvc);
     // adding/logging tests for mainCtrl to the DOM
-    $scope.testMainCtrl = 'mainCtrl is working';
-    console.log('MainCtrl is logging');
+    // $scope.testMainCtrl = 'mainCtrl is working';
+    // console.log('MainCtrl is logging');
     // adding tests for mainSvc to the DOM
-    $scope.testMainSvc = mainSvc.getMainSvc();
-    // $scope.fbo = mainSvc.getCursorStatus();
+    // $scope.testMainSvc = mainSvc.getMainSvc();
   });
 
 // inject dependancies, $scope, and service objects
