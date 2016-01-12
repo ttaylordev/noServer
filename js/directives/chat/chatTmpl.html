@@ -1,25 +1,29 @@
 <!-- testing that this file is displaying text
 where it is plugged into the DOM by the directive -->
 
-{{testGameBoardCtrl}}
-<hr>
-{{testLobbyCtrl}}
-<hr>
-{{viewableMessage}}
-<hr>
-{{useless}}
-<hr>
+<!-- {{testGameBoardCtrl}}
+<hr> {{testLobbyCtrl}}
+<hr> {{viewableMessage}}
+<hr> {{useless}}
+<hr> -->
 
-<div ng-controller="chatCtrl" class="chatPane">
-<div class="messagePane">
+<div class="chatPane">
+  <div class="messagePane">
+      <div ng-repeat="message in messages">{{message.userId}}: {{message.text}}-{{message.time|date:'hh:mm:ss'}}</div>
 
-</div>
-<input type="text" name="name" value="" prototype="Chat with your friends">
-<button ng-click="sendMessage()" type="button" name="button">Send</button>
-
+    <!-- <p ng-repeat="msg in messages track by $index">{{messages}}</p> -->
+  </div>
+  <div class="chatInput">
+    <input ng-model="typeMessage" type="text" name="name" value="" prototype="Chat with your friends">
+    <button ng-click="sendMessage()" type="button" name="button">Send</button>
+  </div>
+  <div ng-repeat="user in users track by $index" ng-show="user.username" class="message message-default">
+    <div class="message-content">
+      <strong class="name">{{user.username}}</strong>
+    </div>
+  </div>
   <hr>
 </div>
-
 
 <!-- the <canvas-directive> element tag in
 index.html is requesting an action

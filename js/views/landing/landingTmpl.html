@@ -1,9 +1,16 @@
 <!-- landing -->
 <!-- uses the name/value of directive node of the angular.module object-->
- <div ng-controller = "landingCtrl">
-   something this time
-  <!-- <landing-directive></landing-directive> -->
-  <!-- <sign-on-directive></sign-on-directive> -->
+<div ng-controller="landingCtrl">
+
+  <div class="mainAuth">
+    <form class="logInForm">
+      <input ng-model="user.email" type="text" name="email" value="" placeholder="email">
+      <input ng-model="user.password" type="text" name="password" value="" placeholder="password">
+      <button ng-submit = "mc.register(user)" class="signIn" type="submit" name="button">sign up</button>
+      <button ng-submit = "mc.login(user)" class="signIn" type="submit" name="button">login</button>
+    </form>
+  </div>
+
   <copyright-dir></copyright-dir>
 
 </div>

@@ -8,23 +8,15 @@ angular.module('shareDraw')
       return chatSvcIsLoading;
     };
 
-    this.getMessages = function() {
-      var messagesRef = new Firebase(baseUrl);
+    this.getMessages = function(location) {
+      var messagesRef = new Firebase(baseUrl + "/chat-message/"+location);
       var messages = $firebaseArray(messagesRef);
-      var memFbo = messages.$watch(function(data) { //event handler for firebase, everytime they get new info they send it out to listeners
-      });
-      return memFbo;
+      return messages;
     };
 
-    this.addMessage = function(text, username) {
-      messages.$add({
-        text: text,
-        username: username
-      });
-    };
-
-    this.removeMessage = function(message) {
-      messages.$remove(message);
-    };
+    //
+    // this.removeMessage = function(message) {
+    //   messages.$remove(message);
+    // };
 
   });

@@ -9,16 +9,16 @@
 
 <body ng-controller="mainCtrl">
   <!-- calls .config to swithc between states -->
-  <ol>
-    <li><a ui-sref="game-board">game-board</a></li>
-    <li><a ui-sref="lobby">lobby</a></li>
-    <li><a ui-sref="landing">landing</a></li>
-  </ol>
+  <span><a ui-sref="game-board">game-board</a></span>
+  <span><a ui-sref="lobby">lobby</a></span>
+  <span><a ui-sref="landing">landing</a></span>
 
   <div class="main-wrapper">
     <!-- this ui-view for game-board, lobby, and landing by state changes -->
     <!-- routes,sets a format for windows/views using ui-router and URL hashes-->
-    <ui-view></ui-view> -->
+    <ui-view></ui-view>
+
+    {{user}}
   </div>
 
 
@@ -51,16 +51,16 @@
   <script src="./js/directives/canvas/canvasDir.js"></script>
   <script src="./js/directives/canvas/canvasSvc.js"></script>
 
+  <!-- chat pane -->
+  <script src="./js/directives/chat/chatCtrl.js"></script>
+  <script src="./js/directives/chat/chatDir.js"></script>
+  <script src="./js/directives/chat/chatSvc.js"></script>
+
   <!-- copyright pane -->
   <script src="./js/directives/copyright/copyrightCtrl.js"></script>
   <script src="./js/directives/copyright/copyrightDir.js"></script>
   <script src="./js/directives/copyright/copyrightSvc.js"></script>
 
-  <!-- chat pane -->
-  <script src="./js/directives/chat/chatCtrl.js"></script>
-  <script src="./js/directives/chat/chatDir.js"></script>
-  <script src="./js/directives/chat/chatSvc.js"></script>
- -->
   <!-- landscape -->
   <!-- score -->
   <!-- scroll -->
