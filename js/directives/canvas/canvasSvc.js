@@ -3,7 +3,7 @@ angular.module('shareDraw')
 
     this.testCanvasSvc = function(){
       var canvasSvcIsLoading = 'canvasSvc is loading';
-      console.log('canvasSvc is logging');
+      console.log('From: canvasSvc via canvasCtrl: canvasSvc is logging');
       return canvasSvcIsLoading;
     };
 

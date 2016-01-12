@@ -20,13 +20,14 @@ angular.module('shareDraw')
       //self.ref = ....; gives it scope ouside of the function.
       var ref = new Firebase(baseUrl + '/game-board/cursor-status');
       var fbo = $firebaseObject(ref); // allows us to write to a firebase object
-      fbo.on("value", function(data) { //event handler for firebase, everytime they get new info they send it out to listeners
-        var exx = data.val().cursorStatus.x;
-        var why = data.val().cursorStatus.y;
-        var color = data.val().cursorStatus.color;
-        console.log('retrieved from firebase: ' + ',x: ' + exx + ',y: ' + why + ',color: ' + color);
+      fbo.$watch(function(data) { //event handler for firebase, everytime they get new info they send it out to listeners
+        // var exx = data.val.cursorStatus.x;
+        // var why = data.val.cursorStatus.y;
+        // var color = data.val.cursorStatus.color;
+        // console.log('retrieved from firebase: ' + ',x: ' + exx + ',y: ' + why + ',color: ' + color);
 
       });
+      return fbo;
     };
     // new creates a new object based off of the input
     //the outter scope this.

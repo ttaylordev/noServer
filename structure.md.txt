@@ -23,7 +23,12 @@ users
 		teamID
 	user1:steve
 		teamID
-
+cursor-status
+	color
+	userMouseDown
+	x
+	y
+	userID
 team
 	room
 rooms
