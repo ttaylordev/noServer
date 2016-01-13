@@ -6,7 +6,7 @@ angular.module('shareDraw')
     return {
       // restricts the way in which you inject templates into your html
       restrict: 'E',
-      templateUrl: 'js/directives/canvasTmpl.html',
+      templateUrl: 'js/directives/brushesTmpl.html',
       controller: 'canvasCtrl',
     };
   });
@@ -16,4 +16,4 @@ console.log('canvasDir is logging outside of Dir function');
 // restrict:
   // 'E'(elements) allows you to use empty<name-of-your-directive-in-snake-case></name-of-your-directive-in-snake-case>
   // 'A'(attributes)
-  // 'C'(class) 
+  // 'C'(class)
