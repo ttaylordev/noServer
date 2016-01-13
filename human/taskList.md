@@ -48,6 +48,7 @@ UI
   private room
   rocket ships and fireworks on scroll down if winner
 
+ease away navbar, make it on hover
 
   buttons
     clearScreen
@@ -55,7 +56,11 @@ UI
       toggle alert
 clear chat upon last user exit
 
-navBar for buttons, or for states, highscores etc,
+------navBar for buttons------
+color scheme themes
+  randomized, or selected
+
+highscores etc,
 
 drawsomething cool on load
 
