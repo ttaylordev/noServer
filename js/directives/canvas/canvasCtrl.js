@@ -9,6 +9,9 @@ angular.module('shareDraw')
     $scope.canvas = document.getElementById('canvas');
     $scope.context = $scope.canvas.getContext('2d');
 
+    var el = document.getElementById('#canvas');
+
+
     //  declaring global variables
     var cursorStatus = mainSvc.getCursorStatus();
     var activeColor;

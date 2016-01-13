@@ -18,3 +18,15 @@ angular.module('shareDraw')
     who keeps track of work being performed, issues
     commands and readies responses to be delivered to
     the DOM*/
+    // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// input type of email
+//   input type of password 8+chars, caps,
+//     sign in buttons
+//       if registered user let em inspect
+//         else register them, using the info they just typed
+//           log in automatically
+
+
+  // doublecheck past project;

@@ -9,16 +9,18 @@
 
 <body ng-controller="mainCtrl">
   <!-- calls .config to swithc between states -->
-  <span><a ui-sref="game-board">game-board</a></span>
-  <span><a ui-sref="lobby">lobby</a></span>
-  <span><a ui-sref="landing">landing</a></span>
+  <div class="navBar">
+    <span><a class="buttons" ui-sref="gameboard">game-board</a></span>
+    <span><a class="buttons" ui-sref="lobby">lobby</a></span>
+    <span><a class="buttons" ui-sref="landing">landing</a></span>
+  </div>
 
-  <div class="main-wrapper">
+  <div class="uiWrapper">
     <!-- this ui-view for game-board, lobby, and landing by state changes -->
     <!-- routes,sets a format for windows/views using ui-router and URL hashes-->
     <ui-view></ui-view>
 
-    {{user}}
+    <!-- {{user}} -->
   </div>
 
 
@@ -39,9 +41,9 @@
   <script src="./js/mainSvc.js"></script>
   <!-- <script src="./js/mainDir.js"></script> -->
   <!-- views controllers -->
-  <script src="./js/views/landing/landingCtrl.js"></script>
-  <script src="./js/views/lobby/lobbyCtrl.js"></script>
-  <script src="./js/views/game-board/gameBoardCtrl.js"></script>
+  <script src="./js/views/landing/landingctrl.js"></script>
+  <script src="./js/views/lobby/lobbyctrl.js"></script>
+  <script src="./js/views/gameboard/gameboardctrl.js"></script>
 
 
   <!-- brushes pane -->

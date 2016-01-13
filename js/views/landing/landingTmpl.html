@@ -3,14 +3,15 @@
 <div ng-controller="landingCtrl">
 
   <div class="mainAuth">
-    <form class="logInForm">
-      <input ng-model="user.email" type="text" name="email" value="" placeholder="email">
+    <form ng-submit="" class="logInForm">
+      <input ng-model="user.email"  type="email" required name="email" value="" placeholder="email">
       <input ng-model="user.password" type="text" name="password" value="" placeholder="password">
-      <button ng-submit = "mc.register(user)" class="signIn" type="submit" name="button">sign up</button>
-      <button ng-submit = "mc.login(user)" class="signIn" type="submit" name="button">login</button>
+      <button ng-submit = "register(user)" class="signIn" type="submit" name="button">sign up</button>
+      <button ng-submit = "login(user)" class="signIn" type="submit" name="button">login</button>
     </form>
   </div>
-
+  <!-- <form2-dir><form2Dir> //another template called by landing Ctrl ngif-->
+  <!-- the controller would swap routes/views between templates -->
   <copyright-dir></copyright-dir>
 
 </div>

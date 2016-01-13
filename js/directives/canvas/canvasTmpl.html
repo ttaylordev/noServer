@@ -1,14 +1,18 @@
 <!-- testing that this file is displaying text
 where it is plugged into the DOM by the directive -->
+<div id="canvasStretch">
+  <div ng-controller="canvasCtrl" width="900px" height="900px">
 
-<div ng-controller="canvasCtrl">
-  <canvas id="canvas" width="500" height="500"></canvas>
-  <button ng-click="drawSquares()" type="button" name="button">Squares!</button>
-  <button ng-click="drawStuff()" type="button" name="button">Draw Stuff</button>
+    <canvas id="canvas" width="700" height="700"></canvas>
+  </br>
+  <a href="#" ng-click="drawSquares()" id="drawSquares" class="buttons">Random Squares</a>
+  <a href="#" ng-click="clearYourScreen()" id="clearScreen" class="buttons">Clear screen</a>
+  <a href="#" ng-click="clearAllScreens()" id="clearAllScreens" class="buttons">Clear all screens</a>
+  <a href="#" ng-click="reSync()" id="reSync" class="buttons">Synchronize</a>
 
-  <hr>
+    <hr>
+  </div>
 </div>
-
 
 <!-- the <canvas-directive> element tag in
 index.html is requesting an action

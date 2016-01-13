@@ -235,3 +235,111 @@ build greedy directivesm they shoudl take up as much space as they possibly can
 <hr> {{canvasSvcIsLoading}}
 
 */
+
+
+          /*
+  *//*Custom Buttons*//*
+          */
+  //
+  // Font Size: 27px bold italic;
+  // Size
+  // Vertical Size:
+  // 24px
+  // Horizontal Size:
+  // 20px
+  // Border
+  // Border Radius:
+  // 19px
+  // Border Size:
+  // 1px
+  //   Box Shadow   /   inset
+  // Vertical Position:
+  // 0px
+  // Horizontal Position:
+  // 0px
+  // Blur Radius:
+  // 0px
+  // Spread Radius:
+  // 0px
+  //   Text Shadow
+  // Vertical Position:
+  // 2px
+  // Horizontal Position:
+  // -1px
+  // Blur Radius:
+  // 40px
+
+  //
+  // create a function that returns the results of calling requets into the
+  //  <input type="text" class="ciu-search__input" name="feat_search" autocomplete="off" autofocus="" value="">
+  //  of caniuse.com;
+    // or tap into their server/api
+
+
+
+/* offset-x | offset-y | blur-radius | spread-radius | color */
+
+//
+// // 1. Create the button
+// var button = document.createElement("button");
+// button.innerHTML = "Do Something";
+//
+// // 2. Append somewhere
+// var body = document.getElementsByTagName("body")[0];
+// body.appendChild(button);
+//
+// // 3. Add event handler
+// button.addEventListener ("click", function() {
+//   alert("did something");
+// });
+//
+
+//
+// .group:before,
+// .group:after {
+//   content:"";
+//   display:table;
+// }
+// .group:after {
+//   clear:both;
+// }
+// .group {
+//   zoom:1; /* For IE 6/7 (trigger hasLayout) */
+// }
+//
+
+//
+// #star-six {
+//   width: 0;
+//   height: 0;
+//   border-left: 50px solid transparent;
+//   border-right: 50px solid transparent;
+//   border-bottom: 100px solid red;
+//   position: relative;
+// }
+// #star-six:after {
+//   width: 0;
+//   height: 0;
+//   border-left: 50px solid transparent;
+//   border-right: 50px solid transparent;
+//   border-top: 100px solid red;
+//   position: absolute;
+//   content: "";
+//   top: 30px;
+//   left: -50px;
+// }
+//
+
+// "float:center".... pseudo elements FTW
+// #l:before, #r:before {
+//   content: "";
+//   width: 125px;
+//   height: 250px;
+// }
+// #l:before {
+//   float: right;
+// }
+// #r:before {
+//   float: left;
+// }
+//

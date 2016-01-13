@@ -27,7 +27,7 @@ angular.module('shareDraw', ['firebase', 'ui.router'])
       // game-board state and nested panes/views
       .state('game-board', {
         url: '/gameboard',
-        templateUrl: './js/views/game-board/gameboardTmpl.html',
+        templateUrl: './js/views/gameboard/gameboardTmpl.html',
         controller: 'gameBoardCtrl',
         // link: function(scope, element, attributes) {
         //
