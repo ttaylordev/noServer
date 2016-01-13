@@ -1,8 +1,8 @@
 requirements:
-     3 routes
-     2 directives
-          templateURL counts as one
-            Must use js in the directive.
+  3 routes
+  2 directives
+    templateURL counts as one
+      Must use js in the directive.
 
 <!-- configure canvas
   Canvas board directive
@@ -24,7 +24,10 @@ chat, send as current user
   can't highlight in link
   can't chat  
     fbo email updates for odd reasons
-
+  auth
+  fix chat
+  set/send/recieve user permissions, we can use this for our "case.states"
+  propper landing
     get getAuth function that retrieves current user and
       get's the email
 one user tied to boxes,
@@ -32,19 +35,19 @@ one user tied to boxes,
 
 
 UI
-  propper landing
-  canvas resize
+
+
+-----canvas resize-----
   chat input lengthened
-  colors, shadows, radii
+  ------colors, shadows, radii-----
   background images
-  color pallette
+-----color pallette-----
   export .png
   export. gif
   solo room
   private room
-  auth
-  fix chat
-  set/send/recieve user permissions, we can use this for our "case.states"
+  rocket ships and fireworks on scroll down if winner
+
 
   buttons
     clearScreen
@@ -53,6 +56,9 @@ UI
 clear chat upon last user exit
 
 navBar for buttons, or for states, highscores etc,
+
+drawsomething cool on load
+
 
 randomSquares
   randomOther shapes
