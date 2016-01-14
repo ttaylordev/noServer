@@ -45,8 +45,12 @@ angular.module('shareDraw')
       $scope.context.beginPath();
     }, false);
 
+
+
+
     //receives firebase data and draws line path from data received
     cursorStatus.$ref().on('value', function(data) {
+      // var clearCanvasBool = data.val().clearCan;
       $scope.context.strokeStyle = data.val().color;
       $scope.context.lineCap = 'round';
       $scope.context.lineWidth = 10;
@@ -78,6 +82,21 @@ angular.module('shareDraw')
         cursorStatus.$save(); //method to send.
       }
     }, false);
+
+    //listens for a change state in clearCon
+    // potentially clearing all users canvas'
+    // cursorStatus.$ref().on('value', function(data) {
+
+    cursorStatus.$watch(function(data) {
+      var clearCanvasBool = cursorStatus.clearCan;
+      if (clearCanvasBool) {
+        clearCanvas();
+      }
+      if (clearCanvasBool) {
+        console.log(true);
+        // cursorStatus.clearCan = false;
+      }
+    },false);
 
 
     //executes and draws lines as mouse and/or server events request it
@@ -112,6 +131,23 @@ angular.module('shareDraw')
       $scope.context.fillRect(Math.random() * 500, Math.random() * 500, Math.random() * 50, Math.random() * 50);
     }
     $scope.drawSquares = drawSquares;
+
+    //clears the canvas on current user
+    function clearCanvas() {
+      $scope.context.clearRect(0, 0, canvas.width, canvas.height);
+    }
+    $scope.clearCanvas = clearCanvas;
+
+    function clearSharedCanvas() {
+      console.log('calling clear Shared Canvas');
+      cursorStatus.clearCan = true;
+      cursorStatus.$save();
+      $scope.context.clearRect(0, 0, canvas.width, canvas.height);
+      cursorStatus.clearCan = false;
+      cursorStatus.$save();
+    }
+    $scope.clearSharedCanvas = clearSharedCanvas;
+
 
   });
 

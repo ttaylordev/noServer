@@ -1,4 +1,36 @@
 
+
+login button
+sign button is working, throwing an alert anyway, not redirecting
+  needs a ng-click
+  
+
+  clear all
+  resync
+
+logged out on refresh or reload
+
+
+
+
+  Css
+   Element by element within each .html
+
+Rrlax
+
+
+List vars
+  Server
+  Local
+  Establish relationships
+  Gui for organizing structure
+  Visual representation of angular
+
+
+
+
+
+
     change landing button
     	name it something else
     	point it to new file authTmpl.html

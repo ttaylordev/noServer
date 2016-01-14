@@ -6,22 +6,26 @@ where it is plugged into the DOM by the directive -->
 <hr> {{viewableMessage}}
 <hr> {{useless}}
 <hr> -->
-
-<div class="chatPane">
-  <div class="messageViewPane">
-      <div ng-repeat="message in messages">{{message.userId}}: {{message.text}}-{{message.time|date:'hh:mm:ss'}}</div>
-
-    <!-- <p ng-repeat="msg in messages track by $index">{{messages}}</p> -->
-  </div>
-  <div class="chatInput">
-    <input ng-model="typeMessage" type="text" name="name" value="" prototype="Chat with your friends">
-    <button ng-click="sendMessage()" id="send"type="button" name="button">Send</button>
-  </div>
-  <div ng-repeat="user in users track by $index" ng-show="user.username" class="messageContainer">
-    <div class="message-content">
-      <strong class="name">{{user.username}}</strong>
+<div class="uiWrapper">
+  <div class="chatPane">
+    <div class="messageViewPane">
+      <div ng-repeat="message in messages | reverseItAnyway">{{message.userId}}: {{message.text}}-{{message.time|date:'hh:mm:ss'}}</div>
+      <!-- <p ng-repeat="msg in messages track by $index">{{messages}}</p> -->
     </div>
   </div>
+  <div class="chatInputBox">
+    <form method="post">
+      <input class="chatInput" ng-model="typeMessage" type="text" name="name" value="" prototype="Chat with your friends">
+    </form>
+
+      <button class="buttons" ng-click="sendMessage()" id="send" type="button" name="button">Send</button>
+
+  </div>
+  <!-- <div ng-repeat="user in users track by $index" ng-show="user.username" class="messageContainer"> -->
+  <div class="message-content">
+    <strong class="name">{{user.username}}</strong>
+  </div>
+  <!-- </div> -->
   <hr>
 </div>
 

@@ -16,17 +16,17 @@ angular.module('shareDraw', ['firebase', 'ui.router'])
         // }
       })
       // lobby state and nested views
-        .state('auth', {
-          url: '/auth',
-          templateUrl: './js/views/auth/authTmpl.html',
-          controller: 'authCtrl',
-          // link: function(scope, element, attributes) {
-          //   //make sure it does this before it loads up that state
-          // }
-        })
+      .state('auth', {
+        url: '/auth',
+        templateUrl: './js/views/auth/authTmpl.html',
+        controller: 'authCtrl',
+        // link: function(scope, element, attributes) {
+        //   //make sure it does this before it loads up that state
+        // }
+      })
 
-      // lobby state and nested views
-      .state('lobby', {
+    // lobby state and nested views
+    .state('lobby', {
         url: '/lobby',
         templateUrl: './js/views/lobby/lobbyTmpl.html',
         controller: 'lobbyCtrl',
@@ -52,3 +52,13 @@ angular.module('shareDraw', ['firebase', 'ui.router'])
     //set up constants within .config, if it's a separate file, name it router.js not config.js
     //
   });
+
+angular.module('shareDraw')
+.filter('reverseItAnyway', function() {
+  return function(theIt) {
+    if(typeof theIt === 'undefined') { return; }
+    return angular.isArray(theIt) ?
+      theIt.slice().reverse() :
+      (theIt + '').split('').reverse().join('');
+  };
+});
