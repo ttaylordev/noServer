@@ -1,0 +1,22 @@
+<!-- testing that this file is displaying text
+where it is plugged into the DOM by the directive -->
+<div class="canvasWrapper">
+  <div id="canvasStretch">
+    <div ng-controller="canvasCtrl" width="900px" height="900px">
+      <canvas id="canvas" width="600" height="300"></canvas>
+      <div class="botButtonWrap">
+        <a ng-click="drawSquares()" id="drawSquares" class="buttons">Random Squares</a>
+        <a ng-click="clearYourScreen()" id="clearScreen" class="buttons">Clear screen</a>
+        <a ng-click="clearAllScreens()" id="clearAllScreens" class="buttons">Clear all screens</a>
+        <a ng-click="reSync()" id="reSync" class="buttons">Synchronize</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- the <canvas-directive> element tag in
+index.html is requesting an action
+from loginDirective, which is returning
+the contents of canvasTempl.html
+it then loads that onto the DOM
+at the tags location-->

@@ -1,0 +1,11 @@
+<!-- main login view -->
+<div class="authAndRegWindow">
+  <hr>
+  <form ng-submit = "login(user)">
+    <input required type="email" ng-model = "user.email" name="name" value="">
+    <input required type="password" ng-model = "user.password" name="name" value="">
+    <button class = "buttons" type="submit">Login</button>
+    <button class = "buttons" ng-click = "register(user)">Sign-up</button>
+  </form>
+  <hr>
+</div>
