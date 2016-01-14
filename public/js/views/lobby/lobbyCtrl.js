@@ -1,6 +1,10 @@
 angular.module('shareDraw')
-  .controller('lobbyCtrl', function($scope, chatSvc, mainSvc) { // inject dependancies, $scope and Svc's
+  .controller('lobbyCtrl', function($scope, chatSvc, mainSvc, $state) { // inject dependancies, $scope and Svc's
     //logging and testing
+    if (!$scope.$parent.authData){
+      console.log("Hmmm");
+      $state.go('landing');
+    }
     console.log('lobbyCtrl is logging inside');
     $scope.testLobbyCtrl = 'lobbyCtrl is working';
   });

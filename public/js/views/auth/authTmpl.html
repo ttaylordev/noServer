@@ -1,18 +1,6 @@
-<!-- main login view -->
-<!--
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
-  </head> -->
-
-
-
 <body>
   <div class="authAndRegWindow">
-    <form id='authForm' ng-submit="login(user)">
+    <form id='authForm'>
       <div class="authSectionTop">
         <input class="authInputs" required type="email" ng-model="user.email" name="name" placeholder="Enter email" value="">
         <br>
@@ -21,12 +9,8 @@
       </div>
       <br>
       <div class="authButtons">
-        <button class="buttons" type="submit">Login</button>
+        <button class="buttons" ng-click="login(user)" type="submit">Login</button>
         <button class="buttons" ng-click="register(user)">Sign-up</button>
       </div>
-
     </form>
   </div>
-  <!--
-  </body>
-</html> -->

@@ -1,11 +1,10 @@
 <div id="landingBackground">
   <div ng-controller="authCtrl">
-    <div ng-if="thereAintNoUser">
-      <a ui-sref="redirectToRegister">
-    Please sign in.
-  </a>
-      <!-- //style that down to the bottom -->
-      <!-- </div> -->
+    <div id="centerThatButton">
+
+      <div ui-sref="auth" class=buttons>
+        Please sign in
+      </div>
 
       <!-- redirect after auth, from  -->
       <!-- if user subverts login div, he's stuck unless he has a button that appears to let him back  -->

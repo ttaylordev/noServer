@@ -11,7 +11,7 @@ angular.module('shareDraw')
     // console.log(messages);
 
     console.log($scope);
-    console.log($scope.$parent.mc);
+    console.log($scope.$parent);
 
     $scope.sendMessage = function() {
       $scope.messages.$add({

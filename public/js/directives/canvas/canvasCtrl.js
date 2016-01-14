@@ -1,5 +1,5 @@
 angular.module('shareDraw')
-  .controller('canvasCtrl', function($scope, $firebaseObject, canvasSvc, mainSvc, $interval) { // inject dependancies, $scope, and service objects
+  .controller('canvasCtrl', function($scope, $state, $firebaseObject, canvasSvc, mainSvc, $interval) { // inject dependancies, $scope, and service objects
     // @@@@@@@@@@@@@@@@@@@ Testing for connectivity@@@@@@@@@@@@@@@@@@@
     // @@    // adding/logging tests for canvasCtrl to the DOM      @@
     // @@    // $scope.testCanvasCtrl = 'canvasCtrl is working';    @@
@@ -10,6 +10,11 @@ angular.module('shareDraw')
 
     // Obtain a reference to the canvas element
     // using its id.
+    if (!$scope.$parent.authData){
+      console.log("Hmmm");
+      $state.go('landing');
+    }
+
     $scope.canvas = document.getElementById('canvas');
     // Obtain a graphics context on the
     // canvas element for drawing.

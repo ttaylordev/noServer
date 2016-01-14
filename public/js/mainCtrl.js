@@ -1,5 +1,5 @@
 angular.module('shareDraw')
-  .controller('mainCtrl', function($firebaseObject, $firebaseAuth, mainSvc, $scope) {
+  .controller('mainCtrl', function($firebaseObject, $firebaseAuth,$state, mainSvc, $scope) {
     // console.log(mainSvc);
     // adding/logging tests for mainCtrl to the DOM
     // $scope.testMainCtrl = 'mainCtrl is working';
@@ -10,18 +10,21 @@ angular.module('shareDraw')
     var ref = new Firebase(firebaseRoot);
     var authObj = $firebaseAuth(ref);
 
-    $scope.user = authObj;
 
     $scope.login = function(user) {
       authObj.$authWithPassword(user).then(function(authData) {
-         console.log('login authData', authData);
+        console.log('login authData', authData);
+        $scope.user = user;
+        $scope.authData= authData;
+        console.log($scope.user);
+        $state.go('lobby');
       }, function(error) {
         alert(error);
       });
     };
     $scope.register = function(user) {
       authObj.$createUser(user).then(function(userData) {
-         console.log('register userData', userData);
+        console.log('register userData', userData);
         $scope.login(user);
       }, function(error) {
         alert(error);

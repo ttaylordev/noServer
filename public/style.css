@@ -1,5 +1,5 @@
 * {
-  /*border: 1px solid red;*/
+  /*outline: 1px solid red;*/
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -8,20 +8,33 @@ body {
   background-color: rgb(116, 92, 67);
   background-image: url("greenGrasGreySkyWillow.jpg");
 }
-#landingBackground {
-  /*background-color: #000000;*/
-  /*background-image: url("greenGrasGreySkyWillow.jpg");*/
-  /*height: 100vh*/
-  ;
+#centerThatButton{
+  height: 10%auto;
+  width: 80%;
+  max-height: 650px;
+  max-width: 475px;
+  background-image: url("croppedGreenWillow.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-style: ridge;
+  border-color: rgba(55, 61, 17, 1);
+  box-shadow: 0px 0px 21px 7px #3A3115;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+
 }
+#landingBackground {}
 .authAndRegWindow {
   height: 80%auto;
   width: 80%;
   max-height: 650px;
   max-width: 475px;
-  /*background-color: black;*/
   background-image: url("croppedGreenWillow.png");
-  /*no-repeat center;*/
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -72,7 +85,6 @@ body {
   left: 0;
   right: 0;
   margin: auto 0;
-  /*padding: 50px 15px;*/
   text-align: center;
   font-family: verdana;
 }
@@ -148,12 +160,8 @@ span {
   width: 100%;
 }
 .defaultUiWrapper {
-  /*background-color: rgb(255, 230, 209);*/
   height: 70%;
   width: 80%;
-  /*border-style: ridge;*/
-  /*border-color: rgba(55, 61, 17, 1);*/
-  /*box-shadow: 0px 0px 21px 7px #3A3115;*/
   position: fixed;
   top: 0;
   bottom: 0;
@@ -163,14 +171,9 @@ span {
   overflow: hidden;
 }
 .uiWrapper {
-  background-color: blue;
   background-color: rgb(255, 230, 209);
   height: 70%;
   width: 80%;
-  /*max-height: 1500px;*/
-  /*background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;*/
   border-style: ridge;
   border-color: rgba(55, 61, 17, 1);
   box-shadow: 0px 0px 21px 7px #3A3115;
@@ -182,7 +185,6 @@ span {
   margin: auto;
 }
 .chatPane {
-  /*background-color: blue;*/
   background-color: rgb(255, 230, 209);
   height: 95%;
   top: 0;
@@ -193,24 +195,10 @@ span {
   overflow-y: scroll;
 }
 .chatInputBox {
-  /*width: 75%;
-  height: 45px;*/
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   background-color: rgb(255, 230, 209);
-  /*position: relative;*/
-  /*top: 40%;*/
-  /*bottom: 0;*/
-  /*text-align: center;*/
-  /*margin-right: auto;*/
-  /*margin-left: auto;*/
-  /*color: #544932;*/
-  /*font-family: Trebuchet MS;*/
-  /*font-size: 1.5em;*/
-  /*padding: 10px 15px;*/
-  /*text-decoration: none;*/
-  /*text-shadow: -1px 2px 40px #000000;*/
 }
 .chatInput {
   width: 95%;
@@ -274,6 +262,14 @@ span {
   position: relative;
   top: 1px;
 }
+#copyright {
+  color: rgb(173, 161, 141);
+  bottom: 0;
+  height: 30px;
+  margin: 0 auto;
+  position: fixed;
+  width: 100%;
+}
 
 /*
 .successfully-saved.hide-opacity {
@@ -312,7 +308,23 @@ span {
 
 /*border-radius: .5;   a hollow wrapper to round the edges of canvas*/
 
-.animated {
+
+/*#canvas{
+  border: 1px solid red;
+}*/
+
+
+/*max-width: width = 800;
+  max-height = 800;*/
+
+
+/*box-shadow:2px right;*/
+
+
+/*}*/
+
+
+/*.animated {
   background-image: url(/css/images/logo.png);
   background-repeat: no-repeat;
   background-position: left top;
@@ -342,24 +354,4 @@ span {
 .fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
-}
-#copyright {
-  color: rgb(173, 161, 141);
-  bottom: 0;
-  height: 30px;
-  /* forces #testmenu to the bottom */
-  margin: 0 auto;
-  position: fixed;
-  width: 100%;
-}
-
-/*#canvas{
-  border: 1px solid red;
 }*/
-
-
-/*max-width: width = 800;
-  max-height = 800;*/
-
-
-/*box-shadow:2px right;*/
