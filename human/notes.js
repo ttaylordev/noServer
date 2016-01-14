@@ -343,3 +343,44 @@ build greedy directivesm they shoudl take up as much space as they possibly can
 //   float: left;
 // }
 //
+
+
+
+//takes data in and passes it to the service if possible
+  // dom stuff has to be on the controller
+
+// controller gets input from html, passes to the service
+// service sends to fbo, fbo sends back, service...
+//passes back to the controller to tell me treu/false
+
+
+
+
+//logging and testing
+// console.log('landingCtrl is logging outside');
+
+/* the controller is where data is stored to variables
+    to be accessed on the DOM.
+    #scope. is the required prefix for DOM passing
+    */
+/* the controller also is responsible for running the
+    funtions stored elswhere in the object/filestructure
+    by assigning it to the $scope. It is a lazy manager,
+    who keeps track of work being performed, issues
+    commands and readies responses to be delivered to
+    the DOM*/
+
+
+
+
+
+  // the <copyright-directive> element tag in
+  //   index.html is requesting an action
+  //   from copyrightDirective, which is returning
+  //   the contents of copyrightTempl.html
+  //   it then loads that onto the DOM
+  //   at the tags location-->
+
+
+  // <!-- landing -->
+  // <!-- uses the name/value of directive node of the angular.module object-->

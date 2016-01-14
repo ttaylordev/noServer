@@ -1,19 +1,12 @@
-requirements:
-  3 routes
-  2 directives
-    templateURL counts as one
-      Must use js in the directive.
 
-<!-- configure canvas
-  Canvas board directive
+    change landing button
+    	name it something else
+    	point it to new file authTmpl.html
 
-  receive x,y
-    see if firebase can receive and serve them along with a brush and a userID
-
-    on MouseDown & mouseOver -->
-       If cursor is within canvas borders
-          X, y
-          MouseDown bool
+    		loginCtrl
+        check for login misplaced/mispelled
+        check for auth misplaced/mispelled
+        check for landing misplaced/mispelled
 
 chat, send as current user
   no response to trigger on signup
@@ -32,6 +25,9 @@ chat, send as current user
       get's the email
 one user tied to boxes,
   auth funciton isn't working as it should
+
+authAndRegWindow on auth TMPl
+<div ng-if="thereAintNoUser"> from landingTmpl, controlled by authSvc
 
 
 UI
@@ -172,10 +168,22 @@ play with random color and settimeout
             may not be possible using firebase
         might be really damn cool
 
+        <!-- configure canvas
+          Canvas board directive
+
+          receive x,y
+            see if firebase can receive and serve them along with a brush and a userID
+
+            on MouseDown & mouseOver -->
+               <!-- If cursor is within canvas borders
+                  X, y
+                  MouseDown bool -->
+
+        <!--
 
 
 
 put the bulk of your code in the service
 if you're going to run a funciton, write it in the service
 controllers should be thin and light and faster
-service stores the functions
+service stores the functions -->

@@ -1,0 +1,28 @@
+
+landing   <-- will only be
+
+    injecting authCtrl
+    landing associations
+        landing testing
+
+
+
+auth pane for signup / already a users
+  get user from fbo, or localcachej
+  if registered user let em' in.
+    log in automatically
+      input type of email
+      input type of password 8+chars, caps,
+        sign in buttons
+          else register them, using the info they just typed
+
+          blend edges, render multiple sizes, load a couple, research more
+             basic background image
+
+
+
+
+
+
+
+ui-sref="redirectToRegister"> from landingTmpl, needs controller action
